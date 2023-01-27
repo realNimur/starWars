@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 5px;
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--color-darkpurple);
+    transition: 0.2s;
+
+    &.active {
+      border-radius: 50%;
+      color: #fff;
+      background-color: var(--color-darkblue);
+    }
+  }
+
+  &__arrow {
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}

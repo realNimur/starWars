@@ -1,0 +1,144 @@
+@import '../../../utils/css/mixin';
+
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.2s;
+  animation: backdrop-animation 0.2s;
+}
+
+@keyframes backdrop-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  width: 800px;
+  height: 371px;
+  display: flex;
+  position: relative;
+
+  @include _sm {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+  }
+
+  &__close {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -52px;
+    width: 32px;
+    height: 32px;
+    background-image: url('../../../assets/images/CharactersPage/closeIcon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__left {
+    background-color: var(--color-darkpurple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &.male {
+        background-image: url('../../../assets/images/CharactersPage/male_icon.png');
+      }
+
+      &.female {
+        background-image: url('../../../assets/images/CharactersPage/female_icon.png');
+      }
+
+      &.another {
+        background-image: url('../../../assets/images/CharactersPage/another_icon.png');
+      }
+    }
+
+    .tablets {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 11px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 10px 10px 0;
+    padding: 30px 15px;
+    background: linear-gradient(180deg, #17002f 42.19%, #1f2a63 100%);
+    flex-grow: 1;
+
+    .header {
+      flex-grow: 1;
+    }
+
+    .name {
+      color: #fdfdfd;
+      font-weight: 700;
+      font-size: 36px;
+      margin-bottom: 23px;
+
+      @include _sm {
+        font-size: 20px;
+      }
+    }
+
+    .characteristics {
+      width: fit-content;
+      padding: 25px;
+      background: #fdfdfd;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      @include _sm {
+        margin-bottom: 15px;
+      }
+    }
+
+    .card {
+      &__list {
+        display: flex;
+        align-items: center;
+        gap: 23px;
+      }
+
+      &__item {
+        padding: 8px 25px;
+        background: #fdfdfd;
+        border-radius: 8px;
+      }
+    }
+  }
+}

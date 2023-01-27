@@ -1,0 +1,62 @@
+@import '../../utils/css/mixin';
+
+.error {
+  &__wrapper {
+    background-color: var(--color-darkpurple);
+    text-align: center;
+    padding-bottom: 95px;
+
+    @include _md{
+      height: 100vh;
+    }
+
+    @include _sm {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 700px;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 59px 0;
+    position: relative;
+
+    @include _md {
+      font-size: 500px;
+    }
+
+    @include _sm {
+      font-size: 100px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../../assets/images/ErrorPage/deadstar.png');
+      width: 690px;
+      background-repeat: no-repeat;
+      height: 623px;
+      background-size: contain;
+
+      @include _md {
+        height: 500px;
+        width: 500px;
+      }
+
+      @include _sm {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
+}

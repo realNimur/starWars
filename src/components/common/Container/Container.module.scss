@@ -1,0 +1,12 @@
+@import '../../../utils/css/mixin';
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--horizonal-padding);
+
+  @include _sm {
+    padding: 30px;
+  }
+}

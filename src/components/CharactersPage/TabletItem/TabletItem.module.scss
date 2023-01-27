@@ -1,0 +1,23 @@
+.tablet__item {
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  line-height: 14px;
+  padding: 1px 12px;
+  font-size: 12px;
+
+  &.green {
+    background-color: var(--color-green);
+  }
+
+  &.yellow {
+    background-color: var(--color-yellow);
+  }
+
+  &.purple {
+    background-color: var(--color-pink);
+  }
+
+  &.blue {
+    background-color: var(--color-blue);
+  }
+}

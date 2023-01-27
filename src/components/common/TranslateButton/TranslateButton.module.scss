@@ -1,0 +1,30 @@
+@import '../../../utils/css/mixin';
+
+.button {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  background-image: url('../../../assets/images/iconTranslate.svg');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center center;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+
+  &.en {
+    background-color: var(--color-orange);
+  }
+
+  &.wookiee {
+    background-color: var(--color-green);
+  }
+
+  @include _sm {
+    bottom: 40px;
+    right: 40px;
+  }
+}
