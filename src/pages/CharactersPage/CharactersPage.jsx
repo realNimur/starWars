@@ -74,7 +74,6 @@ export const CharactersPage = () => {
                     </p>
                     <Select
                       isSearchable={false}
-                      isClearable={true}
                       value={currentFilter}
                       onChange={(selectedValue) => {
                         setCurrentFilter(selectedValue)

@@ -1,12 +1,12 @@
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { CharactersPage, ErrorPage, HomePage } from './pages'
-import { CHARACTERS_PAGE } from './utils/routes.js'
+import { CHARACTERS_PAGE } from './constants/routes.js'
 import { CharactersDataContextProvider, IntlProvider } from './context'
 import { Loader } from './components'
 import './App.scss'
 import './assets/css/fonts.scss'
-import './utils/css/global.scss'
+import './constants/css/global.scss'
 
 const router = createBrowserRouter([
   {

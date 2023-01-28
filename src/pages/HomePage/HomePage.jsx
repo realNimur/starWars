@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Container, Header, IntlText } from '../../components'
-import { CHARACTERS_PAGE } from '../../utils/routes.js'
+import { CHARACTERS_PAGE } from '../../constants/routes.js'
 import styles from './HomePage.module.scss'
 import YodaPNG from './../../assets/images/HomePage/yoda.png'
 

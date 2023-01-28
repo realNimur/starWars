@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container } from '../Container/Container.jsx'
 import { IntlText } from '../IntlText/IntlText'
-import { CHARACTERS_PAGE } from '../../../utils/routes.js'
+import { CHARACTERS_PAGE } from '../../../constants/routes.js'
 import styles from './Header.module.scss'
 
 export const Header = ({ activePage = 'main' }) => {

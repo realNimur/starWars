@@ -18,12 +18,7 @@ function ModalContainer({
     setOpen(false)
   }
 
-  const iconImg =
-    gender.toLowerCase() === 'male'
-      ? styles.male
-      : gender.toLowerCase() === 'female'
-      ? styles.female
-      : styles.another
+  const iconImg = styles[gender] || styles.another
 
   const handleEscClick = (event) => {
     if (event.key === 'Escape') {

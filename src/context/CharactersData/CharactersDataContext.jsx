@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useFetchPeople } from '../../hooks/useFetchPeople.js'
 
 export const CharactersDataContextContext = React.createContext({})
@@ -6,9 +6,14 @@ export const CharactersDataContextContext = React.createContext({})
 export const CharactersDataContextProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState(1)
   const [currentFilter, setCurrentFilter] = useState('')
-  const { charactersList, optionList, totalCount, error, isLoading } =
-    useFetchPeople(currentPage)
-  const countOfPages = useMemo(() => Math.ceil(totalCount / 10), [totalCount])
+  const {
+    charactersList,
+    optionList,
+    totalCount,
+    error,
+    isLoading,
+    countOfPages,
+  } = useFetchPeople(currentPage)
 
   useEffect(() => {
     setCurrentFilter('')
